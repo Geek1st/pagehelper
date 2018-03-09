@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>服务器</title>
+
+<script src="/resource/js/jquery-2.1.4.js"></script>
+<script src="/resource/js/bootstrap.min.js"></script>
+<script src="/resource/js/bootstrap-table.min.js"></script>
+<script src="/resource/js/bootstrap-table-zh-CN.min.js"></script>
+<script src="/resource/json/server-table-config.json"></script>
+<script src="/resource/js/global.js"></script>
+
+<link rel="stylesheet" href="/resource/css/bootstrap.min.css">
+<link rel="stylesheet" href="/resource/css/bootstrap-table.min.css">
+
+<script type="text/javascript">
+	$(function() {
+	});
+</script>
+</head>
+<body>
+	<div class="container">
+		<div class="row clearfix">
+			<div class="col-md-12 column">
+				<div class="page-header">
+					<h1>
+						<small>服务器列表</small>
+					</h1>
+				</div>
+				<div class="btn-toolbar" id="toolbar">
+					<div class="btn-group" role="group" aria-label="..." id="toolbarGroupDefault">
+						<button class="btn btn-primary" type="button" id="btn_add" data-toggle="modal" data-target="#modalAddServer">
+							<em class="glyphicon glyphicon-plus"></em>&nbsp;新增
+						</button>
+						<button class="btn btn-warning" type="button" id="btnEdit">
+							<em class="glyphicon glyphicon-pencil"></em>&nbsp;编辑
+						</button>
+					</div>
+					<div class="btn-group" role="group" id="toolbarGroupEdit">
+						<button class="btn btn-danger" type="button" id="btnDelete" >
+							<em class="glyphicon glyphicon-remove"></em>&nbsp;删除
+						</button>
+						<button class="btn btn-success" type="button" id="btnComplete">
+							<em class="glyphicon glyphicon-ok"></em>&nbsp;完成
+						</button>
+					</div>
+				</div>
+				<table id="table">
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
