@@ -23,7 +23,7 @@ setting = {
     "pageList": [5, 10, 15, 20], 
     responseHandler:function(res){
     	return {
-	        total : res.page, //总页数,前面的key必须为"total"
+	        total : res.size, //总页数,前面的key必须为"total"
 	        data : res.data //行数据，前面的key要与之前设置的dataField的值一致.
     	};
     },

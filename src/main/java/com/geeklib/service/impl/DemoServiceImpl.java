@@ -18,10 +18,9 @@ public class DemoServiceImpl implements DemoService {
 	@Resource
 	DemoMapper demoMapper;
 	
-	public List<DemoEntity> listObject(int offset, int limit) {
+	public List<DemoEntity> listObject() {
 		
-		System.out.println(demoMapper.getClass());
-		return demoMapper.listObject();
+		return demoMapper.queryObject();
 	}
 
 }
