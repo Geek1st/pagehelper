@@ -19,7 +19,8 @@ public class DemoController {
 	DemoService demoService;
 	
 	@GetMapping("/list")
-	public List<DemoEntity> listObject(){
-		return demoService.listObject();
+	public List<DemoEntity> listObject(int offset,int limit){
+		System.out.println(demoService.getClass());
+		return demoService.listObject(offset,limit);
 	}
 }

@@ -6,5 +6,5 @@ import com.geeklib.entity.DemoEntity;
 
 public interface DemoService {
 
-	List<DemoEntity> listObject();
+	List<DemoEntity> listObject(int offset,int limit);
 }

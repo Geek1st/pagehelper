@@ -5,4 +5,7 @@
 		<setting name="mapUnderscoreToCamelCase" value="true" />
 		<setting name="logImpl" value="LOG4J" />
 	</settings>
+	<plugins>
+		<plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+	</plugins>
 </configuration>

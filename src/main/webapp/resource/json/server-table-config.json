@@ -1,0 +1,61 @@
+setting = {
+	"classes":"table table-no-bordered table-striped table-hover",
+	pagination: true,
+	"url": "list.do",
+	"toolbar": "#toolbar",
+	"idField": "id",
+	"uniqueId": "id",
+	"showToggle": true,
+	"showPaginationSwitch": true,
+	//显示 + 详细页
+	"detailView": true,
+	//定义详细页内容
+	"detailFormatter": function(index, row){
+		return row.description;
+	},
+	dataField: "data",
+	"search": true,
+	"showColumns": true,
+	"showRefresh": true,
+	"sidePagination":"server",
+ 	"pageSize" : 10,
+    "pageNumber" : 1,     
+    "pageList": [5, 10, 15, 20], 
+    responseHandler:function(res){
+    	return {
+	        total : res.page, //总页数,前面的key必须为"total"
+	        data : res.data //行数据，前面的key要与之前设置的dataField的值一致.
+    	};
+    },
+	"columns": [
+		{
+			"field": "_checkbox",
+			"checkbox": true,
+			"visible": false,
+			"width": "30px"
+		},
+		{
+			"field": "msgCode",
+			
+			
+		},
+		{
+			"field": "sender",
+			"title": "服务器类型",
+		},
+		{
+			"field": "sendeDate",
+			"title": "服务器名称"
+		},
+		{
+			"field": "mstTitle",
+			"title": "服务器地址"
+		},
+		{
+			"field": "imgfilename",
+			"title": "用户名"
+		},
+	]
+}
+
+ 

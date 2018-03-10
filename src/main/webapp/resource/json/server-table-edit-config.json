@@ -1,0 +1,56 @@
+settingEdit = {
+	"url": "../server/listServer.do",
+	"toolbar": "#toolbar",
+	"idField": "id",
+	"showToggle": true,
+	"showPaginationSwitch": true,
+	"search": true,
+	"showColumns": true,
+	"showRefresh": true,
+	"columns": [
+		{
+			"field": "_checkbox",
+			"checkbox": true
+		},
+		{
+			"field": "id",
+			"title": "id",
+			"visible": false
+		},
+		{
+			"field": "type",
+			"title": "服务器类型",
+		},
+		{
+			"field": "name",
+			"title": "服务器名称"
+		},
+		{
+			"field": "address",
+			"title": "服务器地址"
+		},
+		{
+			"field": "username",
+			"title": "用户名"
+		},
+		{
+			"field": "password",
+			"title": "密码"
+		},
+		{
+			"field": "projectId",
+			"title": "所属项目"
+		},
+		{
+			"field": "description",
+			"title": "描述"
+		},
+		{
+			"field": "_btnEdit",
+			"formatter": function(){
+							 return "<button type='button' class='btn btn-default btn-xs'><em class='glyphicon glyphicon-pencil'></em>&nbsp;修改</button>";
+						 },
+			"width": "50px"
+		}
+	]
+}

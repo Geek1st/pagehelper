@@ -16,11 +16,16 @@
 			</beans:bean>
 		</message-converters>
 	</annotation-driven>
-	<context:component-scan base-package="com.geeklib.controller"></context:component-scan>
+	<context:component-scan base-package="com.geeklib"></context:component-scan>
 	<aop:aspectj-autoproxy proxy-target-class="true" />
 
+
+	<interceptors>
+		<beans:bean class="com.geeklib.interceptor.PagingInterceptor"/>
+	</interceptors>
 	<resources mapping="/resource/**/" location="/resource/" />
 	<resources location="/" mapping="/index.do" />
+	<resources location="/" mapping="/index.html"></resources>
 
 	<beans:bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

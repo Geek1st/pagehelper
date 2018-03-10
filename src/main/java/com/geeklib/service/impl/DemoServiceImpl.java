@@ -5,18 +5,22 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import com.geeklib.entity.DemoEntity;
 import com.geeklib.mapper.DemoMapper;
 import com.geeklib.service.DemoService;
+import com.github.pagehelper.PageHelper;
 
-@Component
-public class DemoServceImpl implements DemoService {
+@Service
+public class DemoServiceImpl implements DemoService {
 
 	@Resource
 	DemoMapper demoMapper;
 	
-	public List<DemoEntity> listObject() {
+	public List<DemoEntity> listObject(int offset, int limit) {
+		
+		System.out.println(demoMapper.getClass());
 		return demoMapper.listObject();
 	}
 
