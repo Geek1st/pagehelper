@@ -8,7 +8,7 @@ setting = {
 	"showToggle": true,
 	"showPaginationSwitch": true,
 	//显示 + 详细页
-	"detailView": true,
+	//"detailView": true,
 	//定义详细页内容
 	"detailFormatter": function(index, row){
 		return row.description;
@@ -29,31 +29,27 @@ setting = {
     },
 	"columns": [
 		{
-			"field": "_checkbox",
-			"checkbox": true,
-			"visible": false,
-			"width": "30px"
+			"field": "usercode",
 		},
 		{
-			"field": "msgCode",
-			
-			
+			"field": "loginname",
+			"title": "登录名",
 		},
 		{
-			"field": "sender",
-			"title": "服务器类型",
+			"field": "userName",
+			"title": "用户名",
 		},
 		{
-			"field": "sendeDate",
-			"title": "服务器名称"
+			"field": "userdesc",
+			"title": "USERDESC"
 		},
 		{
-			"field": "mstTitle",
-			"title": "服务器地址"
+			"field": "regEmail",
+			"title": "邮箱"
 		},
 		{
-			"field": "imgfilename",
-			"title": "用户名"
+			"field": "updateDate",
+			"title": "更新日期"
 		},
 	]
 }

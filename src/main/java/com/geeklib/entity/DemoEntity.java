@@ -4,52 +4,66 @@ import java.util.Date;
 
 import org.apache.ibatis.type.Alias;
 
-@Alias("m_cultureact_gzl")
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+@Alias("f_userinfo")
 public class DemoEntity {
-	private int msgCode;
-	private String sender;
-	private Date sendeDate;
-	private String mstTitle;
-	private String imgfilename;
 
-	public int getMsgCode() {
-		return msgCode;
+	private String USERCODE;
+	private String LOGINNAME;
+	private String UserName;
+	private String USERDESC;
+	private String RegEmail;
+	@JsonFormat(pattern = "yyyy-MM-dd")  
+	private Date updateDate;
+
+	public String getUSERCODE() {
+		return USERCODE;
 	}
 
-	public void setMsgCode(int msgCode) {
-		this.msgCode = msgCode;
+	public void setUSERCODE(String uSERCODE) {
+		USERCODE = uSERCODE;
 	}
 
-	public String getSender() {
-		return sender;
+	public String getLOGINNAME() {
+		return LOGINNAME;
 	}
 
-	public void setSender(String sender) {
-		this.sender = sender;
+	public void setLOGINNAME(String lOGINNAME) {
+		LOGINNAME = lOGINNAME;
 	}
 
-	public Date getSendeDate() {
-		return sendeDate;
+	public String getUserName() {
+		return UserName;
 	}
 
-	public void setSendeDate(Date sendeDate) {
-		this.sendeDate = sendeDate;
+	public void setUserName(String userName) {
+		UserName = userName;
 	}
 
-	public String getMstTitle() {
-		return mstTitle;
+	public String getUSERDESC() {
+		return USERDESC;
 	}
 
-	public void setMstTitle(String mstTitle) {
-		this.mstTitle = mstTitle;
+	public void setUSERDESC(String uSERDESC) {
+		USERDESC = uSERDESC;
 	}
 
-	public String getImgfilename() {
-		return imgfilename;
+	public String getRegEmail() {
+		return RegEmail;
 	}
 
-	public void setImgfilename(String imgfilename) {
-		this.imgfilename = imgfilename;
+	public void setRegEmail(String regEmail) {
+		RegEmail = regEmail;
+	}
+
+	public Date getUpdateDate() {
+		return updateDate;
+	}
+
+	public void setUpdateDate(Date updateDate) {
+		this.updateDate = updateDate;
 	}
 
 }

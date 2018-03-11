@@ -20,7 +20,7 @@ public class DemoServiceImpl implements DemoService {
 	
 	public List<DemoEntity> listObject() {
 		
-		return demoMapper.queryObject();
+		return demoMapper.listObject();
 	}
 
 }
