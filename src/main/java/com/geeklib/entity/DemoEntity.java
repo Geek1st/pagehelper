@@ -8,8 +8,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Alias("f_userinfo")
-public class DemoEntity {
-
+public class DemoEntity{
 	private String USERCODE;
 	private String LOGINNAME;
 	private String UserName;

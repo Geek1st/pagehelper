@@ -21,7 +21,7 @@ public class DemoController {
 	
 	@GetMapping("/list")
 	@NotPaging
-	public Object listObject(){
-		return demoService.listObject();
+	public Object listObject(int offset, int limit){
+		return demoService.listObject(offset,limit);
 	}
 }

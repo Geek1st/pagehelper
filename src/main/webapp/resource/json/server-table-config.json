@@ -7,6 +7,8 @@ setting = {
 	"uniqueId": "id",
 	"showToggle": true,
 	"showPaginationSwitch": true,
+	"sortName":"update_Date",
+	"queryParamsType":"limit",
 	//显示 + 详细页
 	//"detailView": true,
 	//定义详细页内容
@@ -18,13 +20,17 @@ setting = {
 	"showColumns": true,
 	"showRefresh": true,
 	"sidePagination":"server",
- 	"pageSize" : 10,
+ 	"pageSize" : 5,
     "pageNumber" : 1,     
     "pageList": [5, 10, 15, 20], 
+    "queryParams":function(params){
+    	console.log(params);
+    	return params;
+    },
     responseHandler:function(res){
     	return {
-	        total : res.size, //总页数,前面的key必须为"total"
-	        data : res.data //行数据，前面的key要与之前设置的dataField的值一致.
+	        total : res.pageInfo.total, //总页数,前面的key必须为"total"
+	        data : res.pageInfo.list //行数据，前面的key要与之前设置的dataField的值一致.
     	};
     },
 	"columns": [

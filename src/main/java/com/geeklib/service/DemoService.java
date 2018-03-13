@@ -1,10 +1,6 @@
 package com.geeklib.service;
 
-import java.util.List;
+public interface DemoService<DemoEntity> {
 
-import com.geeklib.entity.DemoEntity;
-
-public interface DemoService {
-
-	List<DemoEntity> listObject();
+	Object listObject(int offset,int limit);
 }

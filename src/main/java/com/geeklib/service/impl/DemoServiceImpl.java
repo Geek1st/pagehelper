@@ -1,25 +1,25 @@
 package com.geeklib.service.impl;
 
-import java.util.List;
-
 import javax.annotation.Resource;
 
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-import com.geeklib.entity.DemoEntity;
+import com.geeklib.annotation.EnablePage;
 import com.geeklib.mapper.DemoMapper;
 import com.geeklib.service.DemoService;
-import com.github.pagehelper.PageHelper;
 
 @Service
-public class DemoServiceImpl implements DemoService {
+public class DemoServiceImpl<DemoEntity> implements DemoService<DemoEntity> {
 
 	@Resource
 	DemoMapper demoMapper;
 	
-	public List<DemoEntity> listObject() {
+	@EnablePage
+	public Object listObject(int offset, int limit) {
 		
+		
+		demoMapper.listObject();
+		System.out.println("============");
 		return demoMapper.listObject();
 	}
 
